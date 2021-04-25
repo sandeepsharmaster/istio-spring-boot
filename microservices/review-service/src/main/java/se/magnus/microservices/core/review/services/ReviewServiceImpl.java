@@ -21,6 +21,8 @@ import java.util.function.Supplier;
 
 import static java.util.logging.Level.FINE;
 
+import static java.util.logging.Level.FINE;
+
 @RestController
 public class ReviewServiceImpl implements ReviewService {
 
@@ -75,7 +77,7 @@ public class ReviewServiceImpl implements ReviewService {
         List<Review> list = mapper.entityListToApiList(entityList);
         list.forEach(e -> e.setServiceAddress(serviceUtil.getServiceAddress()));
 
-        LOG.debug("getReviews: response size: {}", list.size());
+        LOG.debug("Response size: {}", list.size());
 
         return list;
     }
